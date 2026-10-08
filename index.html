@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ibeh Innocent O. | Builder • Researcher • Technologist</title>
+
+  <meta
+    name="description"
+    content="Official personal portfolio of Ibeh Innocent O. — Builder, Researcher, Technologist and Entrepreneur."
+  />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#071426",
+            navy2: "#0B1F3A",
+            gold: "#F4C542",
+            gold2: "#FFD966",
+          },
+
+          boxShadow: {
+            glow: "0 0 50px rgba(244,197,66,0.15)",
+          },
+
+          animation: {
+            float: "float 6s ease-in-out infinite",
+            pulseSlow: "pulseSlow 3s ease-in-out infinite",
+          },
+
+          keyframes: {
+            float: {
+              "0%, 100%": {
+                transform: "translateY(0px)",
+              },
+              "50%": {
+                transform: "translateY(-15px)",
+              },
+            },
+
+            pulseSlow: {
+              "0%, 100%": {
+                opacity: "0.5",
+              },
+              "50%": {
+                opacity: "1",
+              },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #071426;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(
+          rgba(255, 255, 255, 0.035) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.035) 1px,
+          transparent 1px
+        );
+
+      background-size: 45px 45px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        90deg,
+        #ffffff,
+        #f4c542,
+        #ffffff
+      );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .typing::after {
+      content: "|";
+      color: #f4c542;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    ::selection {
+      background: #f4c542;
+      color: #071426;
+    }
+  </style>
+</head>
+
+<body class="text-white">
+
+  <!-- =====================================================
+       NAVIGATION
+  ====================================================== -->
+
+  <header class="fixed top-0 left-0 right-0 z-50">
+
+    <nav class="max-w-7xl mx-auto px-5 py-4">
+
+      <div
+        class="glass rounded-2xl px-5 py-3 flex items-center justify-between"
+      >
+
+        <!-- Logo -->
+        <a
+          href="#home"
+          class="text-xl font-black tracking-tight"
+        >
+          Ibeh<span class="text-gold">.</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div
+          id="desktopMenu"
+          class="hidden md:flex items-center gap-7 text-sm text-slate-300"
+        >
+
+          <a href="#about" class="hover:text-white transition">
+            About
+          </a>
+
+          <a href="#journey" class="hover:text-white transition">
+            Journey
+          </a>
+
+          <a href="#ventures" class="hover:text-white transition">
+            Ventures
+          </a>
+
+          <a href="#skills" class="hover:text-white transition">
+            Skills
+          </a>
+
+          <a href="#vision" class="hover:text-white transition">
+            Vision
+          </a>
+
+          <a href="#contact" class="hover:text-white transition">
+            Contact
+          </a>
+
+        </div>
+
+        <!-- CTA -->
+        <a
+  href="connect.html"
+  class="hidden sm:block bg-gold text-navy font-bold px-5 py-3 rounded-xl hover:scale-105 transition"
+>
+  Let's Connect
+</a>
+
+        <!-- Mobile Button -->
+        <button
+          id="menuButton"
+          class="md:hidden text-2xl"
+        >
+          ☰
+        </button>
+
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden glass rounded-2xl mt-2 p-5 space-y-4 text-slate-300"
+      >
+
+        <a href="#about" class="block">
+          About
+        </a>
+
+        <a href="#journey" class="block">
+          Journey
+        </a>
+
+        <a href="#ventures" class="block">
+          Ventures
+        </a>
+
+        <a href="#skills" class="block">
+          Skills
+        </a>
+
+        <a href="#vision" class="block">
+          Vision
+        </a>
+
+        <a href="#contact" class="block">
+          Contact
+        </a>
+
+  <a
+    href="connect.html"
+    class="block bg-gold text-navy font-bold px-5 py-3 rounded-xl text-center mt-4"
+  >
+    Let's Connect
+  </a>
+</div>
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section
+    id="home"
+    class="relative min-h-screen flex items-center overflow-hidden"
+  >
+
+    <!-- Background -->
+    <div class="absolute inset-0 grid-bg"></div>
+
+    <div
+      class="absolute -top-40 -right-40 w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl animate-float"
+    ></div>
+
+    <div
+      class="absolute -bottom-40 -left-40 w-[450px] h-[450px] bg-blue-500/10 rounded-full blur-3xl"
+    ></div>
+
+
+    <div
+      class="relative max-w-7xl mx-auto px-5 pt-32 pb-20 w-full"
+    >
+
+      <div
+        class="grid lg:grid-cols-2 gap-16 items-center"
+      >
+
+        <!-- Hero Text -->
+
+        <div class="reveal">
+
+          <div
+            class="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-xs text-slate-300 mb-7"
+          >
+
+            <span
+              class="w-2 h-2 bg-gold rounded-full animate-pulse"
+            ></span>
+
+            Building ideas. Empowering people. Creating impact.
+
+          </div>
+
+
+          <p
+            class="text-gold uppercase tracking-[0.3em] text-xs font-bold mb-4"
+          >
+            Bldr. Ibeh Innocent Okechukwu. (BISHOP INNOMA)
+          </p>
+
+
+          <h1
+            class="text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.95]"
+          >
+
+            Builder.
+
+            <br />
+
+            <span class="gradient-text">
+              Researcher.
+            </span>
+
+            <br />
+
+            Technologist.
+
+          </h1>
+
+
+          <div
+            class="text-xl sm:text-2xl text-slate-300 mt-7"
+          >
+
+            <span
+              id="typing"
+              class="typing"
+            ></span>
+
+          </div>
+
+
+          <p
+            class="text-slate-400 text-base sm:text-lg leading-8 max-w-2xl mt-7"
+          >
+
+            A Nigerian professional combining building construction,
+            research, technology, education, entrepreneurship and
+            creativity to turn ideas into meaningful solutions.
+
+          </p>
+
+
+          <!-- Buttons -->
+
+          <div
+            class="flex flex-wrap gap-4 mt-9"
+          >
+
+            <a
+              href="#ventures"
+              class="bg-gold text-navy font-extrabold px-6 py-3 rounded-xl hover:-translate-y-1 transition shadow-glow"
+            >
+              Explore My Work
+            </a>
+
+
+            <a
+              href="#about"
+              class="glass px-6 py-3 rounded-xl font-semibold hover:bg-white/10 transition"
+            >
+              My Story
+            </a>
+
+          </div>
+
+
+          <!-- Tags -->
+
+          <div
+            class="flex flex-wrap gap-5 mt-10 text-sm text-slate-500"
+          >
+
+            <span>🇳🇬 Nigeria</span>
+
+            <span>🏗️ Construction</span>
+
+            <span>🔬 Research</span>
+
+            <span>💻 Technology</span>
+
+            <span>🚀 Entrepreneurship</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- =====================================================
+     HERO PROFILE IMAGE
+====================================================== -->
+
+<div class="reveal">
+
+  <div class="relative max-w-md mx-auto">
+
+    <!-- Gold glow behind image -->
+    <div
+      class="absolute -inset-6 bg-gold/20 blur-3xl rounded-full"
+    ></div>
+
+    <!-- Image Card -->
+    <div
+      class="relative glass rounded-[2rem] p-4 shadow-glow overflow-hidden"
+    >
+
+      <!-- Image container -->
+      <div
+        class="relative rounded-[1.5rem] overflow-hidden bg-slate-900 aspect-[4/5]"
+      >
+
+        <!-- YOUR IMAGE -->
+        <img
+          src="img/bishop 4.png"
+          alt="Ibeh Innocent O."
+          class="w-full h-full object-cover object-top"
+        />
+
+        <!-- Bottom gradient -->
+        <div
+          class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-navy via-navy/60 to-transparent"
+        ></div>
+
+        <!-- Name on image -->
+        <div
+          class="absolute bottom-6 left-6 right-6"
+        >
+
+          <p
+            class="text-gold text-xs uppercase tracking-[0.3em] font-bold"
+          >
+            Builder • Researcher • Technologist
+          </p>
+
+          <h3
+            class="text-2xl sm:text-3xl font-black mt-2 text-white"
+          >
+            Ibeh Innocent O.
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- Small professional tags -->
+      <div class="grid grid-cols-3 gap-3 mt-4">
+
+        <div
+          class="bg-white/[.04] border border-white/10 rounded-xl p-3 text-center"
+        >
+          <div class="text-xl">
+            🏗️
+          </div>
+
+          <p class="text-[10px] uppercase tracking-wider text-slate-500 mt-1">
+            Building
+          </p>
+        </div>
+
+
+        <div
+          class="bg-white/[.04] border border-white/10 rounded-xl p-3 text-center"
+        >
+          <div class="text-xl">
+            🔬
+          </div>
+
+          <p class="text-[10px] uppercase tracking-wider text-slate-500 mt-1">
+            Research
+          </p>
+        </div>
+
+
+        <div
+          class="bg-white/[.04] border border-white/10 rounded-xl p-3 text-center"
+        >
+          <div class="text-xl">
+            💻
+          </div>
+
+          <p class="text-[10px] uppercase tracking-wider text-slate-500 mt-1">
+            Technology
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+              <div
+                class="grid grid-cols-2 gap-4"
+              >
+
+                <div
+                  class="bg-white/[.04] border border-white/10 rounded-2xl p-5"
+                >
+
+                  <div class="text-3xl">
+                    🏗️
+                  </div>
+
+                  <h3 class="font-bold mt-4">
+                    Build
+                  </h3>
+
+                  <p class="text-xs text-slate-500 mt-2">
+                    Structures & ideas
+                  </p>
+
+                </div>
+
+
+                <div
+                  class="bg-white/[.04] border border-white/10 rounded-2xl p-5"
+                >
+
+                  <div class="text-3xl">
+                    🔬
+                  </div>
+
+                  <h3 class="font-bold mt-4">
+                    Research
+                  </h3>
+
+                  <p class="text-xs text-slate-500 mt-2">
+                    Evidence & innovation
+                  </p>
+
+                </div>
+
+
+                <div
+                  class="bg-white/[.04] border border-white/10 rounded-2xl p-5"
+                >
+
+                  <div class="text-3xl">
+                    💻
+                  </div>
+
+                  <h3 class="font-bold mt-4">
+                    Technology
+                  </h3>
+
+                  <p class="text-xs text-slate-500 mt-2">
+                    Digital solutions
+                  </p>
+
+                </div>
+
+
+                <div
+                  class="bg-white/[.04] border border-white/10 rounded-2xl p-5"
+                >
+
+                  <div class="text-3xl">
+                    🌍
+                  </div>
+
+                  <h3 class="font-bold mt-4">
+                    Impact
+                  </h3>
+
+                  <p class="text-xs text-slate-500 mt-2">
+                    Africa-focused
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div
+                class="mt-5 border border-gold/20 bg-gold/[.06] rounded-2xl p-5"
+              >
+
+                <p class="text-sm text-slate-300 leading-7">
+
+                  "The goal is bigger than a job title —
+                  it is to build something meaningful that
+                  creates opportunities for others."
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       STATS
+  ====================================================== -->
+
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div
+        class="glass rounded-3xl grid grid-cols-2 md:grid-cols-4 overflow-hidden"
+      >
+
+        <div
+          class="p-7 text-center border-b md:border-b-0 md:border-r border-white/10"
+        >
+
+          <div class="text-4xl font-black text-gold">
+            <span class="counter" data-target="5">
+              0
+            </span>+
+          </div>
+
+          <p
+            class="text-xs uppercase tracking-widest text-slate-500 mt-2"
+          >
+            Years Research & Academic Experience
+          </p>
+
+        </div>
+
+
+        <div
+          class="p-7 text-center border-b md:border-b-0 md:border-r border-white/10"
+        >
+
+          <div class="text-4xl font-black text-gold">
+            <span class="counter" data-target="6">
+              0
+            </span>+
+          </div>
+
+          <p
+            class="text-xs uppercase tracking-widest text-slate-500 mt-2"
+          >
+            Years Entrepreneurship
+          </p>
+
+        </div>
+
+
+        <div
+          class="p-7 text-center border-r border-white/10"
+        >
+
+          <div class="text-4xl font-black text-gold">
+            <span class="counter" data-target="10">
+              0
+            </span>+
+          </div>
+
+          <p
+            class="text-xs uppercase tracking-widest text-slate-500 mt-2"
+          >
+            Fields & Project Themes
+          </p>
+
+        </div>
+
+
+        <div class="p-7 text-center">
+
+          <div class="text-4xl font-black text-gold">
+            1
+          </div>
+
+          <p
+            class="text-xs uppercase tracking-widest text-slate-500 mt-2"
+          >
+            Big African Vision
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ABOUT
+  ====================================================== -->
+
+  <section
+    id="about"
+    class="py-28 bg-slate-950/40"
+  >
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div
+        class="grid lg:grid-cols-[0.8fr_1.2fr] gap-16"
+      >
+
+        <div class="reveal">
+
+          <p
+            class="text-gold text-xs uppercase tracking-[0.3em] font-bold"
+          >
+            About Me
+          </p>
+
+          <h2
+            class="text-4xl sm:text-5xl font-black mt-5 leading-tight"
+          >
+            More than a title.
+            <br />
+            It's a journey.
+          </h2>
+
+        </div>
+
+
+        <div
+          class="reveal text-slate-400 leading-8 space-y-6"
+        >
+
+          <p>
+
+            I am
+            <strong class="text-white">
+              Ibeh Innocent Okechukwu
+            </strong>,
+            popularly known as 
+            <strong class="text-white">
+              Bishop Innoma
+            </strong>,
+            a Nigerian professional whose interests
+            sit at the intersection of construction,
+            research, technology, education,
+            entrepreneurship and creativity.
+
+          </p>
+
+
+          <p>
+
+            My foundation is in building construction
+            and technical education, but curiosity has
+            continually expanded my path into technology,
+            artificial intelligence, cybersecurity,
+            web development, digital skills and innovation.
+
+          </p>
+
+
+          <p>
+
+            I currently work as a
+            <strong class="text-white">
+              Research Officer in the Building Department
+              at Nigerian Building and Road Research Institute (NBRRI)
+            </strong>,
+            while developing businesses, supporting
+            academic research and exploring ideas
+            capable of creating wider impact.
+
+          </p>
+
+
+          <p>
+
+            I believe technology should not simply be
+            impressive. It should be useful, accessible
+            and capable of solving real problems.
+
+          </p>
+
+
+          <div class="grid sm:grid-cols-2 gap-5 pt-5">
+
+            <div class="glass rounded-2xl p-6">
+
+              <div class="text-gold text-2xl">
+                ✦
+              </div>
+
+              <h3 class="font-bold mt-4">
+                Core Identity
+              </h3>
+
+              <p class="text-sm text-slate-500 mt-2">
+                Builder • Researcher • Technologist • Entrepreneur
+              </p>
+
+            </div>
+
+
+            <div class="glass rounded-2xl p-6">
+
+              <div class="text-gold text-2xl">
+                ♥
+              </div>
+
+              <h3 class="font-bold mt-4">
+                What Matters
+              </h3>
+
+              <p class="text-sm text-slate-500 mt-2">
+                Faith • Family • Growth • People • Purpose
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       JOURNEY
+  ====================================================== -->
+
+  <section
+    id="journey"
+    class="py-28"
+  >
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="reveal max-w-3xl">
+
+        <p
+          class="text-gold text-xs uppercase tracking-[0.3em] font-bold"
+        >
+          Professional Journey
+        </p>
+
+        <h2
+          class="text-4xl sm:text-5xl font-black mt-5"
+        >
+          From building structures
+          <br />
+          to building possibilities.
+        </h2>
+
+        <p class="text-slate-400 mt-6 leading-7">
+          A multidisciplinary journey across construction,
+          research, technology and entrepreneurship.
+        </p>
+
+      </div>
+
+
+      <div class="mt-16 space-y-12">
+
+        <!-- Item 1 -->
+
+        <div
+          class="reveal grid md:grid-cols-[180px_1fr] gap-7"
+        >
+
+          <div class="text-gold font-bold">
+            FOUNDATION
+          </div>
+
+          <div>
+
+            <h3 class="text-2xl font-bold">
+              Building Construction & Technical Education 
+              
+            </h3>
+
+            <p
+              class="text-slate-400 leading-7 mt-3 max-w-3xl"
+            >
+
+              Bachelor's Degree in Building Construction & Technical Education 
+              and Master's Degree in Building Construction Technology and ten (10) Years
+              practical work experience in the construction industry.
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Item 2 -->
+
+        <div
+          class="reveal grid md:grid-cols-[180px_1fr] gap-7"
+        >
+
+          <div class="text-gold font-bold">
+            RESEARCH
+          </div>
+
+          <div>
+
+            <h3 class="text-2xl font-bold">
+              Research Officer — NBRRI
+            </h3>
+
+            <p
+              class="text-slate-400 leading-7 mt-3 max-w-3xl"
+            >
+
+              Professional involvement in building
+              research, development, improvement,
+              innovation and technical research activities.
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Item 3 -->
+
+        <div
+          class="reveal grid md:grid-cols-[180px_1fr] gap-7"
+        >
+
+          <div class="text-gold font-bold">
+            DIGITAL EXPANSION
+          </div>
+
+          <div>
+
+            <h3 class="text-2xl font-bold">
+              Technology, AI, Web & Digital Skills
+            </h3>
+
+            <p
+              class="text-slate-400 leading-7 mt-3 max-w-3xl"
+            >
+
+              Expanding into frontend development,
+              artificial intelligence, Data Analysis, 
+              and technology education.
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Item 4 -->
+
+        <div
+          class="reveal grid md:grid-cols-[180px_1fr] gap-7"
+        >
+
+          <div class="text-gold font-bold">
+            ENTREPRENEURSHIP
+          </div>
+
+          <div>
+
+            <h3 class="text-2xl font-bold">
+              Building a brand With African Ambition.
+              
+            </h3>
+
+            <p
+              class="text-slate-400 leading-7 mt-3 max-w-3xl"
+            >
+
+              A researcher and Academic Writer per excellence in undergraduate and 
+              postgraduate research project writing with over 
+              500 works completed across different fields.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       VENTURES
+  ====================================================== -->
+
+  <section
+    id="ventures"
+    class="py-28 bg-slate-950/40"
+  >
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="reveal">
+
+        <p
+          class="text-gold text-xs uppercase tracking-[0.3em] font-bold"
+        >
+          Ventures & Ideas
+        </p>
+
+        <h2
+          class="text-4xl sm:text-5xl font-black mt-5"
+        >
+          Ideas with somewhere to go.
+        </h2>
+
+        <p
+          class="text-slate-400 mt-5 max-w-2xl leading-7"
+        >
+          Businesses, platforms and initiatives
+          growing from local roots toward wider impact.
+        </p>
+
+      </div>
+
+
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14"
+      >
+
+        <!-- TechPilots -->
+
+        <div
+          class="glass rounded-3xl p-7 reveal hover:-translate-y-2 transition"
+        >
+
+          <div class="text-4xl">
+            🚀
+          </div>
+
+          <h3 class="text-xl font-bold mt-5">
+            TechPilots Africa
+          </h3>
+
+          <p class="text-gold text-sm mt-2">
+            Leading Africa's Digital Future
+          </p>
+
+          <p
+            class="text-slate-400 text-sm leading-7 mt-4"
+          >
+
+            A technology-focused business vision
+            spanning digital products, devices,
+            connectivity, skills and technology growth
+            across Africa. 
+            Also focused in writing Academic works like journals,
+            thesis, research projects etc.
+
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-5">
+
+            <span class="tag">
+              Technology
+            </span>
+
+            <span class="tag">
+              Digital
+            </span>
+
+            <span class="tag">
+              Africa
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Young Innovators -->
+
+        <div
+          class="glass rounded-3xl p-7 reveal hover:-translate-y-2 transition"
+        >
+
+          <div class="text-4xl">
+            🧑‍💻
+          </div>
+
+          <h3 class="text-xl font-bold mt-5">
+            Young Innovators Tech Lab
+          </h3>
+
+          <p
+            class="text-slate-400 text-sm leading-7 mt-4"
+          >
+
+            Technology education covering frontend,
+            backend, graphics, video editing, UI/UX,
+            digital marketing and AI/ML.
+
+          </p>
+
+        </div>
+
+
+        <!-- FunBase -->
+
+        <div
+          class="glass rounded-3xl p-7 reveal hover:-translate-y-2 transition"
+        >
+
+          <div class="text-4xl">
+            🎉
+          </div>
+
+          <h3 class="text-xl font-bold mt-5">
+            FunBase Outdoor Arena
+          </h3>
+
+          <p
+            class="text-slate-400 text-sm leading-7 mt-4"
+          >
+
+            A recreation and entertainment concept
+            designed around community, fun and memorable
+            experiences.
+
+          </p>
+
+        </div>
+
+
+        <!-- HeartBeat -->
+
+        <div
+          class="glass rounded-3xl p-7 reveal hover:-translate-y-2 transition"
+        >
+
+          <div class="text-4xl">
+            🎶
+          </div>
+
+          <h3 class="text-xl font-bold mt-5">
+            HeartBeat Surprises
+          </h3>
+
+          <p class="text-gold text-sm mt-2">
+            Every story deserves a song.
+          </p>
+
+          <p
+            class="text-slate-400 text-sm leading-7 mt-4"
+          >
+
+            A creative concept combining music,
+            emotion and thoughtful surprises.
+
+          </p>
+
+        </div>
+
+
+        <!-- Bulie -->
+
+        <div
+          class="glass rounded-3xl p-7 reveal hover:-translate-y-2 transition"
+        >
+
+          <div class="text-4xl">
+            🌍
+          </div>
+
+          <h3 class="text-xl font-bold mt-5">
+            Bulie Africa Initiative
+          </h3>
+
+          <p
+            class="text-slate-400 text-sm leading-7 mt-4"
+          >
+
+            A long-term social-impact vision focused
+            on rural poverty alleviation and creating
+            opportunities for vulnerable communities.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       SKILLS
+  ====================================================== -->
+
+  <section
+    id="skills"
+    class="py-28"
+  >
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div
+        class="text-center max-w-2xl mx-auto reveal"
+      >
+
+        <p
+          class="text-gold text-xs uppercase tracking-[0.3em] font-bold"
+        >
+          Capabilities
+        </p>
+
+        <h2
+          class="text-4xl sm:text-5xl font-black mt-5"
+        >
+          A multidisciplinary toolkit.
+        </h2>
+
+        <p class="text-slate-400 mt-5 leading-7">
+          Different disciplines. One objective:
+          solve real problems and create useful things.
+        </p>
+
+      </div>
+
+
+      <div
+        class="grid md:grid-cols-2 gap-6 mt-14"
+      >
+
+        <!-- Technology -->
+
+        <div
+          class="glass rounded-3xl p-7 reveal"
+        >
+
+          <h3 class="text-xl font-bold">
+            Technology & Digital
+          </h3>
+
+
+          <div class="space-y-6 mt-8">
+
+            <div>
+
+              <div
+                class="flex justify-between text-sm mb-2"
+              >
+
+                <span>
+                  HTML / CSS / Tailwind
+                </span>
+
+                <span class="text-gold">
+                  90%
+                </span>
+
+              </div>
+
+              <div class="h-2 bg-white/5 rounded-full">
+
+                <div
+                  class="h-full w-[90%] bg-gold rounded-full"
+                ></div>
+
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <div
+                class="flex justify-between text-sm mb-2"
+              >
+
+                <span>
+                  JavaScript / Web Development
+                </span>
+
+                <span class="text-gold">
+                  82%
+                </span>
+
+              </div>
+
+              <div class="h-2 bg-white/5 rounded-full">
+
+                <div
+                  class="h-full w-[82%] bg-gold rounded-full"
+                ></div>
+
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <div
+                class="flex justify-between text-sm mb-2"
+              >
+
+                <span>
+                  AI & Prompt Engineering
+                </span>
+
+                <span class="text-gold">
+                  88%
+                </span>
+
+              </div>
+
+              <div class="h-2 bg-white/5 rounded-full">
+
+                <div
+                  class="h-full w-[88%] bg-gold rounded-full"
+                ></div>
+
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <div
+                class="flex justify-between text-sm mb-2"
+              >
+
+                <span>
+                  UI/UX & Graphic Design
+                </span>
+
+                <span class="text-gold">
+                  86%
+                </span>
+
+              </div>
+
+              <div class="h-2 bg-white/5 rounded-full">
+
+                <div
+                  class="h-full w-[86%] bg-gold rounded-full"
+                ></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Research -->
+
+        <div
+          class="glass rounded-3xl p-7 reveal"
+        >
+
+          <h3 class="text-xl font-bold">
+            Research & Professional
+          </h3>
+
+
+          <div class="space-y-6 mt-8">
+
+            <div>
+
+              <div
+                class="flex justify-between text-sm mb-2"
+              >
+
+                <span>
+                  Academic Research
+                </span>
+
+                <span class="text-gold">
+                  95%
+                </span>
+
+              </div>
+
+              <div class="h-2 bg-white/5 rounded-full">
+
+                <div
+                  class="h-full w-[95%] bg-gold rounded-full"
+                ></div>
+
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <div
+                class="flex justify-between text-sm mb-2"
+              >
+
+                <span>
+                  Building / Construction
+                </span>
+
+                <span class="text-gold">
+                  90%
+                </span>
+
+              </div>
+
+              <div class="h-2 bg-white/5 rounded-full">
+
+                <div
+                  class="h-full w-[90%] bg-gold rounded-full"
+                ></div>
+
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <div
+                class="flex justify-between text-sm mb-2"
+              >
+
+                <span>
+                  Excel / Data Analysis
+                </span>
+
+                <span class="text-gold">
+                  84%
+                </span>
+
+              </div>
+
+              <div class="h-2 bg-white/5 rounded-full">
+
+                <div
+                  class="h-full w-[84%] bg-gold rounded-full"
+                ></div>
+
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <div
+                class="flex justify-between text-sm mb-2"
+              >
+
+                <span>
+                  Entrepreneurship
+                </span>
+
+                <span class="text-gold">
+                  88%
+                </span>
+
+              </div>
+
+              <div class="h-2 bg-white/5 rounded-full">
+
+                <div
+                  class="h-full w-[88%] bg-gold rounded-full"
+                ></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       RESEARCH
+  ====================================================== -->
+
+  <section
+    class="py-28 bg-slate-950/40"
+  >
+
+    <div
+      class="max-w-7xl mx-auto px-5"
+    >
+
+      <div
+        class="grid lg:grid-cols-2 gap-16 items-center"
+      >
+
+        <div class="reveal">
+
+          <p
+            class="text-gold text-xs uppercase tracking-[0.3em] font-bold"
+          >
+            Research & Innovation
+          </p>
+
+          <h2
+            class="text-4xl sm:text-5xl font-black mt-5"
+          >
+            Curiosity turned
+            <br />
+            into evidence.
+          </h2>
+
+          <p
+            class="text-slate-400 leading-8 mt-6"
+          >
+
+            Research is a major part of my professional
+            identity. I enjoy turning questions into
+            structured investigations, interpreting data
+            and translating findings into practical
+            recommendations.
+
+          </p>
+
+
+          <div class="flex flex-wrap gap-3 mt-7">
+
+            <span class="glass px-4 py-2 rounded-full text-sm">
+              Building Research
+            </span>
+
+            <span class="glass px-4 py-2 rounded-full text-sm">
+              Education
+            </span>
+
+            <span class="glass px-4 py-2 rounded-full text-sm">
+              Technology
+            </span>
+
+            <span class="glass px-4 py-2 rounded-full text-sm">
+              Innovation
+            </span>
+
+            <span class="glass px-4 py-2 rounded-full text-sm">
+              Data Analysis
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="grid sm:grid-cols-2 gap-5 reveal"
+        >
+
+          <div class="glass rounded-3xl p-7">
+
+            <span class="text-gold text-2xl">
+              01
+            </span>
+
+            <h3 class="font-bold text-lg mt-5">
+              Ask
+            </h3>
+
+            <p class="text-sm text-slate-500 mt-2">
+              Identify a meaningful problem or research question.
+            </p>
+
+          </div>
+
+
+          <div class="glass rounded-3xl p-7">
+
+            <span class="text-gold text-2xl">
+              02
+            </span>
+
+            <h3 class="font-bold text-lg mt-5">
+              Investigate
+            </h3>
+
+            <p class="text-sm text-slate-500 mt-2">
+              Gather evidence using structured methods.
+            </p>
+
+          </div>
+
+
+          <div class="glass rounded-3xl p-7">
+
+            <span class="text-gold text-2xl">
+              03
+            </span>
+
+            <h3 class="font-bold text-lg mt-5">
+              Analyse
+            </h3>
+
+            <p class="text-sm text-slate-500 mt-2">
+              Interpret data carefully and communicate findings.
+            </p>
+
+          </div>
+
+
+          <div class="glass rounded-3xl p-7">
+
+            <span class="text-gold text-2xl">
+              04
+            </span>
+
+            <h3 class="font-bold text-lg mt-5">
+              Impact
+            </h3>
+
+            <p class="text-sm text-slate-500 mt-2">
+              Turn knowledge into useful action and innovation.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       VALUES
+  ====================================================== -->
+
+  <section class="py-28">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="reveal">
+
+        <p
+          class="text-gold text-xs uppercase tracking-[0.3em] font-bold"
+        >
+          Personal Values
+        </p>
+
+        <h2
+          class="text-4xl sm:text-5xl font-black mt-5"
+        >
+          What keeps the work grounded.
+        </h2>
+
+      </div>
+
+
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-14"
+      >
+
+        <div class="glass rounded-3xl p-7 reveal">
+
+          <div class="text-4xl">
+            🙏
+          </div>
+
+          <h3 class="font-bold text-xl mt-5">
+            Faith
+          </h3>
+
+          <p class="text-slate-500 text-sm leading-7 mt-3">
+            A Christian foundation and a desire
+            to keep purpose at the centre of achievement.
+          </p>
+
+        </div>
+
+
+        <div class="glass rounded-3xl p-7 reveal">
+
+          <div class="text-4xl">
+            👨‍👩‍👧
+          </div>
+
+          <h3 class="font-bold text-xl mt-5">
+            Family & People
+          </h3>
+
+          <p class="text-slate-500 text-sm leading-7 mt-3">
+            Relationships, kindness, communication
+            and meaningful connections matter.
+          </p>
+
+        </div>
+
+
+        <div class="glass rounded-3xl p-7 reveal">
+
+          <div class="text-4xl">
+            💡
+          </div>
+
+          <h3 class="font-bold text-xl mt-5">
+            Innovation
+          </h3>
+
+          <p class="text-slate-500 text-sm leading-7 mt-3">
+            Ideas become valuable when they solve
+            real problems.
+          </p>
+
+        </div>
+
+
+        <div class="glass rounded-3xl p-7 reveal">
+
+          <div class="text-4xl">
+            🌍
+          </div>
+
+          <h3 class="font-bold text-xl mt-5">
+            Impact
+          </h3>
+
+          <p class="text-slate-500 text-sm leading-7 mt-3">
+            The long-term goal is to create
+            opportunities beyond myself.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       VISION
+  ====================================================== -->
+
+  <section
+    id="vision"
+    class="py-32 relative overflow-hidden bg-slate-950/40"
+  >
+
+    <div class="absolute inset-0 grid-bg"></div>
+
+
+    <div
+      class="relative max-w-5xl mx-auto px-5 text-center reveal"
+    >
+
+      <p
+        class="text-gold text-xs uppercase tracking-[0.3em] font-bold"
+      >
+        The Bigger Vision
+      </p>
+
+
+      <h2
+        class="text-4xl sm:text-6xl font-black mt-6 leading-tight"
+      >
+
+        From local roots
+
+        <br />
+
+        <span class="gradient-text">
+          to African impact.
+        </span>
+
+      </h2>
+
+
+      <p
+        class="text-slate-400 max-w-3xl mx-auto mt-7 text-lg leading-8"
+      >
+
+        Build locally. Learn continuously.
+        Create boldly. Grow sustainably.
+
+        Use technology, education, business and
+        research to contribute to a stronger digital
+        future for Africa.
+
+      </p>
+
+
+      <div
+        class="flex flex-wrap justify-center items-center gap-3 mt-10"
+      >
+
+        <span class="glass rounded-full px-5 py-3">
+          Umunze
+        </span>
+
+        <span class="text-gold">
+          →
+        </span>
+
+        <span class="glass rounded-full px-5 py-3">
+          Southeast Nigeria
+        </span>
+
+        <span class="text-gold">
+          →
+        </span>
+
+        <span class="glass rounded-full px-5 py-3">
+          Nigeria
+        </span>
+
+        <span class="text-gold">
+          →
+        </span>
+
+        <span class="glass rounded-full px-5 py-3">
+          Africa
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CONTACT
+  ====================================================== -->
+
+  <section
+    id="contact"
+    class="py-28"
+  >
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div
+        class="glass rounded-[2rem] p-8 sm:p-12 lg:p-16 reveal"
+      >
+
+        <div
+          class="grid lg:grid-cols-2 gap-14 items-center"
+        >
+
+          <div>
+
+            <p
+              class="text-gold text-xs uppercase tracking-[0.3em] font-bold"
+            >
+              Let's Connect
+            </p>
+
+
+            <h2
+              class="text-4xl sm:text-6xl font-black mt-5 leading-tight"
+            >
+
+              Have an idea?
+
+              <br />
+
+              <span class="text-gold">
+                Let's build it.
+              </span>
+
+            </h2>
+
+
+            <p
+              class="text-slate-400 leading-8 mt-6 max-w-xl"
+            >
+
+              For research, technology, business,
+              partnerships, digital projects or
+              creative collaborations, let's start
+              a conversation.
+
+            </p>
+
+          </div>
+
+
+          <div class="space-y-4">
+
+            <a
+              href="mailto:techpilotsafrica@gmail.com"
+              class="block bg-white/[.04] border border-white/10 rounded-2xl p-5 hover:bg-white/[.08] transition"
+            >
+
+              <span
+                class="text-xs uppercase tracking-widest text-slate-500"
+              >
+                Email
+              </span>
+
+              <div class="font-semibold mt-2">
+                techpilotsafrica@gmail.com
+              </div>
+
+            </a>
+
+
+            <a
+              href="tel:+2348100058632"
+              class="block bg-white/[.04] border border-white/10 rounded-2xl p-5 hover:bg-white/[.08] transition"
+            >
+
+              <span
+                class="text-xs uppercase tracking-widest text-slate-500"
+              >
+                Phone
+              </span>
+
+              <div class="font-semibold mt-2">
+                +234 810 005 8632
+              </div>
+
+            </a>
+
+
+            <div
+              class="bg-gold text-navy rounded-2xl p-5"
+            >
+
+              <span
+                class="text-xs uppercase tracking-widest font-bold"
+              >
+                Open to
+              </span>
+
+              <div class="font-black mt-2">
+                Research • Technology • Business • Partnerships
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="border-t border-white/10">
+
+    <div
+      class="max-w-7xl mx-auto px-5 py-8 flex flex-col md:flex-row justify-between gap-4 text-sm text-slate-500"
+    >
+
+      <p>
+        © <span id="year"></span>
+        Ibeh Innocent O.
+      </p>
+
+      <p>
+        Built with purpose. Powered by curiosity. 🇳🇬
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- BACK TO TOP -->
+
+  <button
+    id="topButton"
+    class="hidden fixed bottom-6 right-6 bg-gold text-navy w-12 h-12 rounded-full font-black shadow-glow z-50"
+  >
+    ↑
+  </button>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+    /* ============================
+       MOBILE MENU
+    ============================ */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", () => {
+
+      mobileMenu.classList.toggle("hidden");
+
+    });
+
+
+    mobileMenu
+      .querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          mobileMenu.classList.add("hidden");
+
+        });
+
+      });
+
+
+    /* ============================
+       TYPING EFFECT
+    ============================ */
+
+    const typingElement =
+      document.getElementById("typing");
+
+    const phrases = [
+
+      "Building ideas into real-world solutions.",
+
+      "Researching problems that matter.",
+
+      "Exploring AI, technology and innovation.",
+
+      "Creating businesses with African ambition.",
+
+      "Empowering people through digital skills."
+
+    ];
+
+    let phraseIndex = 0;
+
+    let characterIndex = 0;
+
+    let deleting = false;
+
+
+    function typingEffect() {
+
+      const currentPhrase =
+        phrases[phraseIndex];
+
+
+      if (!deleting) {
+
+        typingElement.textContent =
+          currentPhrase.substring(
+            0,
+            characterIndex + 1
+          );
+
+        characterIndex++;
+
+
+        if (
+          characterIndex ===
+          currentPhrase.length
+        ) {
+
+          deleting = true;
+
+          setTimeout(
+            typingEffect,
+            1600
+          );
+
+          return;
+
+        }
+
+      } else {
+
+        typingElement.textContent =
+          currentPhrase.substring(
+            0,
+            characterIndex - 1
+          );
+
+        characterIndex--;
+
+
+        if (characterIndex === 0) {
+
+          deleting = false;
+
+          phraseIndex =
+            (phraseIndex + 1) %
+            phrases.length;
+
+        }
+
+      }
+
+
+      setTimeout(
+        typingEffect,
+        deleting ? 35 : 60
+      );
+
+    }
+
+
+    typingEffect();
+
+
+    /* ============================
+       SCROLL REVEAL
+    ============================ */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (
+              entry.isIntersecting
+            ) {
+
+              entry.target.classList.add(
+                "show"
+              );
+
+              revealObserver.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
+
+
+    revealElements.forEach(element => {
+
+      revealObserver.observe(element);
+
+    });
+
+
+    /* ============================
+       COUNTERS
+    ============================ */
+
+    const counters =
+      document.querySelectorAll(".counter");
+
+
+    const counterObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (
+              !entry.isIntersecting
+            ) return;
+
+
+            const counter =
+              entry.target;
+
+            const target =
+              Number(
+                counter.dataset.target
+              );
+
+            let current = 0;
+
+
+            const updateCounter =
+              () => {
+
+                current +=
+                  Math.ceil(
+                    target / 40
+                  );
+
+
+                if (
+                  current >= target
+                ) {
+
+                  counter.textContent =
+                    target;
+
+                } else {
+
+                  counter.textContent =
+                    current;
+
+                  requestAnimationFrame(
+                    updateCounter
+                  );
+
+                }
+
+              };
+
+
+            updateCounter();
+
+
+            counterObserver.unobserve(
+              counter
+            );
+
+          });
+
+        },
+
+        {
+          threshold: 0.7
+        }
+
+      );
+
+
+    counters.forEach(counter => {
+
+      counterObserver.observe(
+        counter
+      );
+
+    });
+
+
+    /* ============================
+       BACK TO TOP
+    ============================ */
+
+    const topButton =
+      document.getElementById(
+        "topButton"
+      );
+
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        if (
+          window.scrollY > 600
+        ) {
+
+          topButton.classList.remove(
+            "hidden"
+          );
+
+        } else {
+
+          topButton.classList.add(
+            "hidden"
+          );
+
+        }
+
+      }
+    );
+
+
+    topButton.addEventListener(
+      "click",
+      () => {
+
+        window.scrollTo({
+
+          top: 0,
+
+          behavior: "smooth"
+
+        });
+
+      }
+    );
+
+
+    /* ============================
+       CURRENT YEAR
+    ============================ */
+
+    document.getElementById(
+      "year"
+    ).textContent =
+      new Date().getFullYear();
+
+
+  </script>
+
+</body>
+</html>
